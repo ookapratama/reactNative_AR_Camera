@@ -1,11 +1,22 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import {HStack, VStack} from '../../components';
 
 const Home = () => {
   return (
-    <View style={{backgroundColor: '#F3F8F2'}}>
-      <Text>Home screen</Text>
-    </View>
+    <>
+      <HStack level="3">
+        <Text>Home screen</Text>
+        <Text>Home screen</Text>
+        <Text>Home screen</Text>
+      </HStack>
+
+      <VStack level="4" mt={20} pv={20}>
+        <Text>Home screen</Text>
+        <Text>Home screen</Text>
+        <Text>Home screen</Text>
+      </VStack>
+    </>
   );
 };
 
