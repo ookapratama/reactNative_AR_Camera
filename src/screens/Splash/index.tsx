@@ -1,14 +1,13 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
-import React, { useEffect } from 'react';
-import { navigate } from '../../navigation/RootNavigation';
+import React, {useEffect} from 'react';
+import {navigate} from '../../navigation/RootNavigation';
 
 const Splash = () => {
-
   useEffect(() => {
     setTimeout(() => {
-      navigate('Home')
-    }, 2000)
-  }, [])
+      navigate('Home');
+    }, 3000);
+  }, []);
 
   return (
     <View style={{backgroundColor: '#67AAF9', flex: 1}}>
