@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <HStack level="3">
-        <Text>Home screen11111</Text>
+        <Text>Home screen</Text>
         <Text>Home screen</Text>
         <Text>Home screen</Text>
       </HStack>
