@@ -2,17 +2,30 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useLayout} from '../hooks';
 
-const Cards = () => {
-  const {width, height, top, bottom} = useLayout();
+// icon menu
+import {Icons} from '../assets/index';
+
+const Cards = (props : any) => {
+  const {width, height} = useLayout();
+
+  const iconMap = {
+    about: Icons.about,
+    camera: Icons.camera,
+    exit: Icons.exit,
+    info: Icons.info,
+    student: Icons.student,
+    gallery: Icons.gallery,
+  };
 
   return (
     <View>
       <TouchableOpacity style={styles.card}>
         <Image
-          source={require('../assets/icon_menu/student.png')}
+          source={iconMap[props.icon]}
           style={{width: width - 300, height: height / 10}}
           resizeMode="contain"
         />
+        <Text style={styles.title_menu}>{props.title}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -30,8 +43,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.21,
     shadowRadius: 8.19,
     elevation: 11,
-    backgroundColor: '#67AAF9',
+    backgroundColor: '#FEFCFB',
     padding: 20,
     borderRadius: 10,
   },
+  title_menu: {
+    fontSize: 22,
+    textAlign: 'center',
+    color: '#000',
+    marginTop:8
+  }
 });

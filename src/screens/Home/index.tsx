@@ -5,7 +5,6 @@ import {useLayout} from '../../hooks';
 
 const Home = () => {
   const {width, height, top, bottom} = useLayout();
-  console.log(top);
 
   return (
     <>
@@ -24,17 +23,17 @@ const Home = () => {
       </HStack>
 
       {/* Card Menu */}
-      <HStack style={{backgroundColor: '#fff', marginTop: top + 40}} mh={30}>
-          <Cards />
-          <Cards />
+      <HStack style={{marginTop: top + 40}} mh={30}>
+        <Cards title={'Profile'} icon={'student'} />
+        <Cards title={'About'} icon={'about'} />
       </HStack>
-      <HStack style={{backgroundColor: '#fff', marginTop: top + 40}} mh={30}>
-          <Cards />
-          <Cards />
+      <HStack style={{marginTop: top + 40}} mh={30}>
+        <Cards title={'Gallery'} icon={'gallery'} />
+        <Cards title={'AR Camera'} icon={'camera'} />
       </HStack>
-      <HStack style={{backgroundColor: '#fff', marginTop: top + 40}} mh={30}>
-          <Cards />
-          <Cards />
+      <HStack style={{marginTop: top + 40}} mh={30}>
+        <Cards title={'Instructions'} icon={'info'} />
+        <Cards title={'Exit'} icon={'exit'} />
       </HStack>
     </>
   );
@@ -63,6 +62,6 @@ const styles = StyleSheet.create({
   card_menu: {
     backgroundColor: '#67AAF9',
     padding: 40,
-    borderRadius: 10
+    borderRadius: 10,
   },
 });

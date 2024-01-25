@@ -1,6 +1,7 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import {navigate} from '../../navigation/RootNavigation';
+import {Icons} from '../../assets';
 
 const Splash = () => {
   useEffect(() => {
@@ -9,11 +10,15 @@ const Splash = () => {
     }, 3000);
   }, []);
 
+  const iconMap = {
+    splash: Icons.splash_image,
+  };
+
   return (
     <View style={{backgroundColor: '#67AAF9', flex: 1}}>
       <Image
         style={styles.image}
-        source={require('../../assets/img/ar.png')}
+        source={iconMap['splash']}
         resizeMode="contain"
       />
       <Text style={styles.text}>Nature Explorer</Text>
