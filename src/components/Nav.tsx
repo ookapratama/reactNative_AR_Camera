@@ -2,10 +2,14 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {useLayout} from '../hooks';
 import {HStack} from '.';
+import {Icons} from '../assets';
 
-const Nav = (props : any) => {
+const Nav = (props: any) => {
   const {width, height} = useLayout();
-
+  const iconMap = {
+    splash: Icons.splash_image,
+  };
+  
   return (
     <HStack
       style={[styles.nav, {backgroundColor: '#67AAF9'}]}
@@ -14,7 +18,7 @@ const Nav = (props : any) => {
       justify="space-around">
       <Image
         style={{width: width - 300, height: height / 10}}
-        source={require('../../assets/img/ar.png')}
+        source={iconMap['splash']}
         resizeMode="contain"
       />
       <Text style={styles.text_nav}>{props.title}</Text>
