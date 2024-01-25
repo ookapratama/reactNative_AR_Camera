@@ -24,13 +24,17 @@ const Home = () => {
       </HStack>
 
       {/* Card Menu */}
-      <HStack style={{backgroundColor: '#000', marginTop: top + 40}} mh={40}>
-        <VStack>
-          {/* <TouchableOpacity style={styles.card_menu}>
-            <Text>Tes</Text>
-          </TouchableOpacity> */}
+      <HStack style={{backgroundColor: '#fff', marginTop: top + 40}} mh={30}>
           <Cards />
-        </VStack>
+          <Cards />
+      </HStack>
+      <HStack style={{backgroundColor: '#fff', marginTop: top + 40}} mh={30}>
+          <Cards />
+          <Cards />
+      </HStack>
+      <HStack style={{backgroundColor: '#fff', marginTop: top + 40}} mh={30}>
+          <Cards />
+          <Cards />
       </HStack>
     </>
   );
