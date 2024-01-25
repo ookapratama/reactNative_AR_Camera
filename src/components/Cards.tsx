@@ -1,11 +1,12 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useLayout} from '../hooks';
+import {navigate} from '../navigation/RootNavigation';
 
 // icon menu
 import {Icons} from '../assets/index';
 
-const Cards = (props : any) => {
+const Cards = (props: any) => {
   const {width, height} = useLayout();
 
   const iconMap = {
@@ -19,7 +20,7 @@ const Cards = (props : any) => {
 
   return (
     <View>
-      <TouchableOpacity style={styles.card}>
+      <TouchableOpacity style={styles.card} onPress={() => navigate(props.to)}>
         <Image
           source={iconMap[props.icon]}
           style={{width: width - 300, height: height / 10}}
@@ -51,6 +52,6 @@ const styles = StyleSheet.create({
     fontSize: 22,
     textAlign: 'center',
     color: '#000',
-    marginTop:8
-  }
+    marginTop: 8,
+  },
 });

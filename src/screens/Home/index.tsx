@@ -2,29 +2,19 @@ import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Cards, HStack, VStack} from '../../components';
 import {useLayout} from '../../hooks';
+import {Nav} from '../../components';
 
 const Home = () => {
-  const {width, height, top, bottom} = useLayout();
+  const {top} = useLayout();
 
   return (
-    <>
+    <View>
       {/* Navbar */}
-      <HStack
-        style={[styles.nav, {backgroundColor: '#67AAF9'}]}
-        pe={20}
-        pv={30}
-        justify="space-around">
-        <Image
-          style={{width: width - 300, height: height / 10}}
-          source={require('../../assets/img/ar.png')}
-          resizeMode="contain"
-        />
-        <Text style={styles.text_nav}>Nature Explorer</Text>
-      </HStack>
+      <Nav title='Nature Explorer' />
 
       {/* Card Menu */}
       <HStack style={{marginTop: top + 40}} mh={30}>
-        <Cards title={'Profile'} icon={'student'} />
+        <Cards title={'Profile'} icon={'student'} to={'Profile'} />
         <Cards title={'About'} icon={'about'} />
       </HStack>
       <HStack style={{marginTop: top + 40}} mh={30}>
@@ -35,30 +25,13 @@ const Home = () => {
         <Cards title={'Instructions'} icon={'info'} />
         <Cards title={'Exit'} icon={'exit'} />
       </HStack>
-    </>
+    </View>
   );
 };
 
 export default Home;
 
 const styles = StyleSheet.create({
-  nav: {
-    shadowColor: '#000000',
-    shadowOffset: {
-      width: 0,
-      height: 18,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 20.0,
-    elevation: 24,
-  },
-  text_nav: {
-    fontSize: 28,
-    fontWeight: '500',
-    textAlign: 'center',
-    alignSelf: 'center',
-    color: '#000',
-  },
   card_menu: {
     backgroundColor: '#67AAF9',
     padding: 40,

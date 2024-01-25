@@ -1,12 +1,12 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
-import {navigate} from '../../navigation/RootNavigation';
+import {reset} from '../../navigation/RootNavigation';
 import {Icons} from '../../assets';
 
 const Splash = () => {
   useEffect(() => {
     setTimeout(() => {
-      navigate('Home');
+      reset('Home');
     }, 3000);
   }, []);
 

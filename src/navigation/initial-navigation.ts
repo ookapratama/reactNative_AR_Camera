@@ -1,9 +1,9 @@
 export type ScreenStackList = {
-    SplashScreen: undefined;
-    HomeScreen: undefined;
-    ProfileScreen: undefined;
-    AboutScreen: undefined;
-    GalleryScreen: undefined;
-    ARCameraScreen: undefined;
-    GuideScreen: undefined;
+    Splash: undefined;
+    Home: undefined;
+    Profile: undefined;
+    About: undefined;
+    Gallery: undefined;
+    ARCamera: undefined;
+    Instruction: undefined;
 }
