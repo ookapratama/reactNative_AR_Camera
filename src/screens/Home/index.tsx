@@ -15,7 +15,7 @@ const Home = () => {
       {/* Card Menu */}
       <HStack style={{marginTop: top + 40}} mh={30}>
         <Cards title={'Profile'} icon={'student'} to={'Profile'} />
-        <Cards title={'About'} icon={'about'} />
+        <Cards title={'About'} icon={'about'} to={'About'} />
       </HStack>
       <HStack style={{marginTop: top + 40}} mh={30}>
         <Cards title={'Gallery'} icon={'gallery'} />

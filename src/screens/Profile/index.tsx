@@ -3,7 +3,7 @@ import React from 'react';
 import {Nav, VStack} from '../../components';
 import {Icons} from '../../assets';
 import {useLayout} from '../../hooks';
-import { navigate } from '../../navigation/RootNavigation';
+import {navigate} from '../../navigation/RootNavigation';
 
 const Profile = () => {
   const {width, height} = useLayout();
@@ -31,7 +31,9 @@ const Profile = () => {
           NAMA : Ahmad Baisuki{' '}
         </Text>
         <Text style={styles.text}>STAMBUK : 201019292</Text>
-        <TouchableOpacity style={styles.btn_back} onPress={() => navigate('Home')}>
+        <TouchableOpacity
+          style={styles.btn_back}
+          onPress={() => navigate('Home')}>
           <Text style={{fontSize: 18, color: '#fff'}}>Back</Text>
         </TouchableOpacity>
       </VStack>
@@ -50,6 +52,14 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   btn_back: {
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 5.62,
+    elevation: 8,
     marginVertical: 40,
     padding: 16,
     paddingHorizontal: 60,

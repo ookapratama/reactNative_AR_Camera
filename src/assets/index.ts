@@ -8,4 +8,5 @@ export const Icons = {
     gallery: require('./icon_menu/gallery.png'),
     info: require('./icon_menu/info.png'),
     student: require('./icon_menu/student.png'),
+    object3D: require('./icon_menu/3d.png'),
 };
