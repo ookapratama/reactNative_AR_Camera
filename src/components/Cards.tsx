@@ -1,4 +1,12 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  BackHandler,
+  Alert,
+} from 'react-native';
 import React from 'react';
 import {useLayout} from '../hooks';
 import {navigate} from '../navigation/RootNavigation';
@@ -18,9 +26,24 @@ const Cards = (props: any) => {
     gallery: Icons.gallery,
   };
 
+  const outApp = () => {
+    console.log('exit btn clicked');
+    Alert.alert('Warning', 'Apakah anda yakin ?', [
+      {
+        text: 'Kembali',
+        style: 'cancel',
+      },
+      {text: 'Ya', onPress: () => BackHandler.exitApp()},
+    ]);
+  };
+
   return (
     <View>
-      <TouchableOpacity style={styles.card} onPress={() => navigate(props.to)}>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => {
+          props.to === 'Exit' ? outApp() : navigate(props.to);
+        }}>
         <Image
           source={iconMap[props.icon]}
           style={{width: width - 300, height: height / 10}}

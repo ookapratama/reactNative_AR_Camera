@@ -23,7 +23,7 @@ const Home = () => {
       </HStack>
       <HStack style={{marginTop: top + 40}} mh={30}>
         <Cards title={'Instructions'} icon={'info'} />
-        <Cards title={'Exit'} icon={'exit'} />
+        <Cards title={'Exit'} icon={'exit'} to={'Exit'} />
       </HStack>
     </View>
   );
