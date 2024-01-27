@@ -13,6 +13,7 @@ import Splash from '../screens/Splash';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import About from '../screens/About';
+import Instruction from '../screens/Guide';
 
 enableScreens();
 
@@ -31,6 +32,7 @@ const AppContainer = () => {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="About" component={About} />
+          <Stack.Screen name="Instruction" component={Instruction} />
         </Stack.Navigator>
       </View>
     </NavigationContainer>

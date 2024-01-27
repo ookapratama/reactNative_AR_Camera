@@ -22,7 +22,7 @@ const Home = () => {
         <Cards title={'AR Camera'} icon={'camera'} />
       </HStack>
       <HStack style={{marginTop: top + 40}} mh={30}>
-        <Cards title={'Instructions'} icon={'info'} />
+        <Cards title={'Instructions'} icon={'info'} to={'Instruction'} />
         <Cards title={'Exit'} icon={'exit'} to={'Exit'} />
       </HStack>
     </View>
